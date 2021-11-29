@@ -1,6 +1,6 @@
 // theme colors
-$base-primary: #326dee !default;
-$base-secondary: #1ac886 !default;
+$base-primary: #f25f3a !default;
+$base-secondary: #242d52 !default;
 $error: #d32752 !default;
 $info: #f6c31c !default;
 
@@ -31,11 +31,25 @@ $base-border: 1px;
 $base-border-radius: 2rem;
 
 // box-shadow
-$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1) !default;
+$base-box-shadow: 0px 3px 6px rgba(0, 0, 0, 25%) !default;
 
 // font-size
 $base-font-size: 1rem;
 $font-size-sm: $base-font-size * 0.75 !default;
-$font-size-lg: $base-font-size * 1.5 !default;
-$font-size-xl: $base-font-size * 2 !default;
+$font-size-lg: $base-font-size * 1.6 !default;
+$font-size-xl: $base-font-size * 2.5 !default;
 $font-size-xxl: $base-font-size * 3 !default;
+
+// font-weight
+
+$typography: (
+	"100": 100,
+	"200": 200,
+	"300": 300,
+	"400": 400,
+	"500": 500,
+	"600": 600,
+	"700": 700,
+	"800": 800,
+	"900": 900,
+);

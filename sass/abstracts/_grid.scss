@@ -10,7 +10,9 @@ $grid-gaps: (
 );
 
 $layout-values: flex-start, flex-end, center, space-between, space-around;
-
+$align-content: flex-start, flex-end, center, space-between, space-around;
+$align-items: flex-start, flex-end, center, stretch, baseline;
+$text: center, left, right, end, start;
 // base layout
 
 .container {
@@ -22,7 +24,12 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 
 .row {
 	display: flex;
-	flex-grow: row wrap;
+	flex-flow: row wrap;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
 }
 
 // grid gaps
@@ -40,6 +47,24 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 @each $val in $layout-values {
 	.justify-#{$val} {
 		justify-content: $val;
+	}
+}
+
+@each $val in $align-content {
+	.align-#{$val} {
+		align-content: $val;
+	}
+}
+
+@each $val in $align-items {
+	.align-item-#{$val} {
+		align-items: $val;
+	}
+}
+
+@each $val in $text {
+	.text-align-#{$val} {
+		text-align: $val;
 	}
 }
 
