@@ -1,3 +1,189 @@
 $base-primary: hsl(12, 88%, 59%);
 $base-secondary: hsl(228, 39%, 23%);
+
+html {
+	background-color: hsl(0, 0%, 98%);
+	overflow-x: hidden;
+}
+
 @import "../stylux/main.scss";
+
+// .article-after {
+// 	position: relative;
+// 	&::before {
+// 		content: "";
+// 		position: absolute;
+// 		background-color: rgba($base-primary, 20%);
+// 		top: 0;
+// 		right: -10%;
+// 		height: 100%;
+// 		width: 100%;
+// 		z-index: -1;
+// 		border-top-left-radius: 10px;
+// 		border-bottom-left-radius: 10px;
+// 	}
+// }
+
+.bg-mobile {
+	position: relative;
+	svg {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&--big {
+		z-index: -1;
+	}
+}
+
+.cursor {
+	cursor: pointer;
+}
+
+.fill-icon > path {
+	transition: all 0.2s ease;
+}
+
+.fill-icon:hover > path {
+	fill: hsl(12, 88%, 59%);
+}
+
+.opacity {
+	transition: all 0.2s ease;
+}
+
+.opacity:hover {
+	opacity: 0.7;
+}
+
+.shadow {
+	box-shadow: $base-box-shadow;
+}
+
+// jquery hamburger
+
+.navbar-menu {
+	background-color: #fafafa;
+	position: absolute;
+	top: 100px;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	transform: translateX(-100%);
+	transition: 0.5s;
+}
+
+.navbar-menu.active {
+	transform: translateX(0);
+	transition: 0.5s;
+}
+
+.navbar-menu .menu-listing {
+	padding: 0;
+	margin: 0;
+	text-align: right;
+}
+
+.menu-listing li {
+	display: inline-block;
+}
+
+.menu-listing li a {
+	background-color: #fff;
+	color: #262626;
+	display: block;
+	font-size: calc($base-font-size * 1.6);
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	transition: 0.5s;
+}
+
+.menu-listing li a:hover {
+	background-color: $base-primary;
+	color: #fff;
+	transition: 0.5s;
+}
+
+.menu {
+	cursor: pointer;
+	transition: 0.3s;
+	z-index: 9999;
+}
+
+@media only screen and (max-width: 1023px) {
+	.navbar-menu {
+		height: auto;
+		z-index: 1;
+	}
+
+	.menu-listing li {
+		display: block;
+	}
+
+	.navbar-menu .menu-listing {
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.menu {
+		display: none;
+	}
+	.navbar-menu {
+		position: relative;
+		top: 0;
+		transform: translateX(0);
+	}
+	.menu-listing li a {
+		background: inherit;
+		color: #262626;
+		display: block;
+		font-size: calc($base-font-size * 1.6);
+		letter-spacing: 1px;
+		transition: 0.2s ease;
+	}
+	.menu-listing li a:hover {
+		background: inherit;
+		color: $base-secondary;
+		opacity: 0.5;
+	}
+}
+
+// slider from slick
+
+.img-slide img {
+	margin: 0 auto;
+	width: 60px;
+}
+
+.text-slide {
+	width: min(90%, 400px);
+	margin: 0 auto;
+}
+
+.slick-dots {
+	margin-top: $base-margin * 1.5;
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	li {
+		margin: 0 0.25rem;
+	}
+}
+
+.dots {
+	cursor: pointer;
+	background-color: inherit;
+	margin-top: 1rem;
+	width: 12px;
+	height: 12px;
+	border: 2px solid hsl(12, 88%, 59%);
+	border-radius: 100%;
+	&:active {
+		background-color: hsl(12, 88%, 59%);
+	}
+}
