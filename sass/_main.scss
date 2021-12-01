@@ -1,0 +1,25 @@
+.main {
+	&__img {
+		margin: 0 auto;
+	}
+	&__order {
+		@include mq(xxl) {
+			width: 400px;
+			order: -1;
+		}
+	}
+	&__space {
+		&__text {
+			@include mq(xxl) {
+				h1 {
+					font-size: 4rem;
+				}
+				text-align: left;
+			}
+		}
+		@include mq(xxl) {
+			justify-content: space-between;
+			margin-top: 9rem;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+.work {
+	@include mq(xxl) {
+		flex-direction: row;
+		align-items: center;
+	}
+	h1 {
+		@include mq(xxl) {
+			text-align: left;
+			font-size: $font-size-xxl * 1.4;
+		}
+	}
+	&__link {
+		@include mq(xxl) {
+			text-align: right;
+		}
+	}
+}
+
+.opinion-btn {
+	display: none;
+	@include mq(large) {
+		display: block;
+	}
+}

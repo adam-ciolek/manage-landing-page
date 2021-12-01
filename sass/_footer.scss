@@ -1,0 +1,100 @@
+.footer {
+	&__logo {
+		@include mq(xxl) {
+			order: -1;
+			height: 130px;
+			justify-content: space-between;
+		}
+	}
+	&__menu {
+		width: min(90%, 500px);
+		margin: auto;
+		margin-bottom: 2rem;
+		@include mq(xxl) {
+			order: 0;
+		}
+	}
+	&__input {
+		p {
+			display: none;
+			@include mq(xxl) {
+				display: block;
+				text-align: right;
+			}
+		}
+		@include mq(xxl) {
+			display: flex;
+			flex-direction: column;
+			order: 1;
+			align-items: flex-end;
+		}
+	}
+	&__inbox {
+		a {
+			margin-left: 1rem;
+			@include mq(xxl) {
+				margin-left: 1rem;
+			}
+		}
+	}
+	&__copy {
+		display: block;
+		@include mq(xxl) {
+			display: none;
+		}
+	}
+	&__icon {
+		padding-top: 5rem;
+		margin: auto;
+		svg {
+			margin-right: 1rem;
+			@include mq(xxl) {
+				margin-right: 1.3rem;
+			}
+		}
+		@include mq(xxl) {
+			width: 100%;
+			justify-content: left;
+			order: 2;
+			align-items: flex-end;
+			margin: 0;
+			text-align: inherit;
+		}
+	}
+	&__company {
+		@include mq(xxl) {
+			margin-top: 0;
+			text-align: inherit;
+		}
+	}
+
+	@include mq(xxl) {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+	}
+}
+
+.footer-bg {
+	background-color: hsl(233, 12%, 13%);
+}
+
+.cursor {
+	cursor: pointer;
+}
+
+.fill-icon > path {
+	transition: all 0.2s ease;
+}
+
+.fill-icon:hover > path {
+	fill: hsl(12, 88%, 59%);
+}
+
+.opacity {
+	transition: all 0.2s ease;
+}
+
+.opacity:hover {
+	opacity: 0.7;
+}

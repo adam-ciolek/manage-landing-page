@@ -1,0 +1,45 @@
+// slider from slick
+
+.img-slide {
+	position: relative;
+	top: 30px;
+}
+
+.img-slide img {
+	margin: 0 auto;
+	width: 60px;
+}
+
+.text-slide {
+	width: min(90%, 400px);
+	margin: 0 auto;
+}
+
+.slick-dots {
+	margin-top: $base-margin * 1.5;
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	li {
+		margin: 0 0.25rem;
+	}
+}
+
+.dots {
+	cursor: pointer;
+	background-color: inherit;
+	margin-top: 1rem;
+	width: 12px;
+	height: 12px;
+	border: 2px solid hsl(12, 88%, 59%);
+	border-radius: 100%;
+	&:active {
+		background-color: hsl(12, 88%, 59%);
+	}
+}
+
+.bg-slid {
+	background-color: hsl(227, 12%, 96%);
+	width: min(90%, 500px);
+	margin: 0 auto;
+}

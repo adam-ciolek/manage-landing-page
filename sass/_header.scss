@@ -1,0 +1,26 @@
+.header {
+	&__button {
+		display: none;
+		transition: all 0.2s ease;
+		@include mq(large) {
+			display: block;
+			background-color: hsl(12, 88%, 59%);
+			border-radius: 3rem;
+			padding: 1rem;
+			cursor: pointer;
+		}
+	}
+}
+
+.bg-mobile {
+	position: relative;
+	svg {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&--big {
+		z-index: -1;
+	}
+}
