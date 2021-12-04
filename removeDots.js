@@ -5,9 +5,3 @@ dotNums.forEach(el => {
     el.textContent = ''
 });
 
-// function removeText(item) {
-//     item.innerHTML = "";
-// }
-
-// dotNums.forEach(removeText);
-
